@@ -21,14 +21,14 @@ namespace DapperDino.BuildingBlocks
 
             var aimInput = ctx.ReadValue<Vector2>();
 
-            var rotation = new Vector3(
+            var rotation = new Vector2(
                 xAxis ? -aimInput.y : 0f,
-                yAxis ? aimInput.x : 0f,
-                0f);
+                yAxis ? aimInput.x : 0f
+            );
 
             rotation *= speed * Time.deltaTime;
 
-            transform.Rotate(rotation);
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x + rotation.x, transform.eulerAngles.y + rotation.y);
         }
     }
 }

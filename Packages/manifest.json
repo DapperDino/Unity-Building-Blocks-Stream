@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.unity.inputsystem": "1.0.0-preview.5",
+    "com.unity.inputsystem": "1.0.0-preview.6",
     "com.unity.render-pipelines.universal": "7.1.8",
     "com.unity.textmeshpro": "2.0.1",
     "com.unity.ugui": "1.0.0",
