@@ -212,7 +212,12 @@ PrefabInstance:
     - target: {fileID: 1411580098351068800, guid: a5883ba0fabdf7045b5a70358e17acfc,
         type: 3}
       propertyPath: challengeText
-      value: In this challenge your goal is to destroy the target
+      value: Make the cannon fire.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411580098351068800, guid: a5883ba0fabdf7045b5a70358e17acfc,
+        type: 3}
+      propertyPath: challengeTitle
+      value: Cannon Firing
       objectReference: {fileID: 0}
     - target: {fileID: 1411580098688965988, guid: a5883ba0fabdf7045b5a70358e17acfc,
         type: 3}

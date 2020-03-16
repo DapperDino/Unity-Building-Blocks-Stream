@@ -7,13 +7,10 @@ namespace DapperDino.BuildingBlocks
         [SerializeField] private HealthBehaviour healthBehaviour = null;
         [SerializeField] private Color fullHealthColour = new Color(0f, 1f, 0f, 1f);
         [SerializeField] private Color noHealthColour = new Color(1f, 0f, 0f, 1f);
-
-        private Renderer[] renderers;
+        [SerializeField] private Renderer[] renderers = new Renderer[0];
 
         private void Start()
         {
-            renderers = GetComponentsInChildren<Renderer>();
-
             HandleHealthChanged(healthBehaviour.Health, healthBehaviour.MaxHealth);
 
             healthBehaviour.OnHealthChanged += HandleHealthChanged;

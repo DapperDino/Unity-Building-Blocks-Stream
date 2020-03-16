@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 2138677392}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -121,22 +121,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &279894356
+--- !u!4 &560076351 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1411580098351068927, guid: a5883ba0fabdf7045b5a70358e17acfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1411580098906939584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1267739811
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1893506246}
+    m_TransformParent: {fileID: 560076351}
     m_Modifications:
     - target: {fileID: 5940638143381552252, guid: aaa71675abac75a4e9e489043aa6403e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5940638143381552252, guid: aaa71675abac75a4e9e489043aa6403e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5940638143381552252, guid: aaa71675abac75a4e9e489043aa6403e,
         type: 3}
@@ -186,21 +192,21 @@ PrefabInstance:
     - target: {fileID: 5940638143381552255, guid: aaa71675abac75a4e9e489043aa6403e,
         type: 3}
       propertyPath: m_Name
-      value: Target (1)
+      value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa71675abac75a4e9e489043aa6403e, type: 3}
---- !u!1001 &1106412337
+--- !u!1001 &2067383907
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1893506246}
+    m_TransformParent: {fileID: 560076351}
     m_Modifications:
     - target: {fileID: 5940638143381552252, guid: aaa71675abac75a4e9e489043aa6403e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5940638143381552252, guid: aaa71675abac75a4e9e489043aa6403e,
         type: 3}
@@ -259,17 +265,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa71675abac75a4e9e489043aa6403e, type: 3}
---- !u!1001 &1893506245
+--- !u!108 &2138677392 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2138677392, guid: a5883ba0fabdf7045b5a70358e17acfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1411580098906939584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1411580098906939584
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1411580098452054205, guid: a5883ba0fabdf7045b5a70358e17acfc,
+    - target: {fileID: 1411580098351068800, guid: a5883ba0fabdf7045b5a70358e17acfc,
         type: 3}
-      propertyPath: yAxis
-      value: 1
+      propertyPath: challengeText
+      value: Make your mouse control the pitch (X-Axis) of the cannon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411580098351068800, guid: a5883ba0fabdf7045b5a70358e17acfc,
+        type: 3}
+      propertyPath: challengeTitle
+      value: Cannon Aiming (Part 1)
       objectReference: {fileID: 0}
     - target: {fileID: 1411580098688965988, guid: a5883ba0fabdf7045b5a70358e17acfc,
         type: 3}
@@ -331,11 +348,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1942367989027109446, guid: a5883ba0fabdf7045b5a70358e17acfc,
+        type: 3}
+      propertyPath: fullHealthColour.g
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942367989027109446, guid: a5883ba0fabdf7045b5a70358e17acfc,
+        type: 3}
+      propertyPath: noHealthColour.r
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5883ba0fabdf7045b5a70358e17acfc, type: 3}
---- !u!4 &1893506246 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1411580098351068927, guid: a5883ba0fabdf7045b5a70358e17acfc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1893506245}
-  m_PrefabAsset: {fileID: 0}

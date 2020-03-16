@@ -170,6 +170,9 @@ MonoBehaviour:
   healthBehaviour: {fileID: 1559569729964524241}
   fullHealthColour: {r: 0, g: 0.8, b: 0, a: 1}
   noHealthColour: {r: 0.8, g: 0, b: 0, a: 1}
+  renderers:
+  - {fileID: 3020506462233470326}
+  - {fileID: 3020506462733246627}
 --- !u!114 &8548124298584995422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,14 +226,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3020506462233470323}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.258819, y: 0, z: 0, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3020506462733246625}
   m_Father: {fileID: 3020506462051277376}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
 --- !u!33 &3020506462233470327
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -386,7 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2ff6c371825a24b8becf11c9754071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 3020506462051277391}
   projectilePrefab: {fileID: 3017878221051006784, guid: a6b06af48c9d52748aaddda30c298668,
     type: 3}
   spawnPoint: {fileID: 3020506461917877730}
-  initialVelocity: {x: 0, y: 0, z: 15}
+  initialVelocity: {x: 0, y: 0, z: 20}
