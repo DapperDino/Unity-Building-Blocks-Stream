@@ -16,9 +16,8 @@ namespace DapperDino.BuildingBlocks
         [SerializeField] private string challengeText = string.Empty;
         [SerializeField] private GameObject wellDonePanel = null;
         [SerializeField] private GameObject tryAgainPanel = null;
-        [SerializeField] private GameObject cannon = null;
-        [SerializeField] private HealthBehaviour playerHealth = null;
 
+        private HealthBehaviour playerHealth;
         private List<HealthBehaviour> targets = new List<HealthBehaviour>();
 
         private void OnEnable()
@@ -47,6 +46,7 @@ namespace DapperDino.BuildingBlocks
                 return;
             }
 
+            playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBehaviour>();
             targets = GetComponentsInChildren<HealthBehaviour>().ToList();
 
             playerHealth.OnDeath += HandlePlayerDeath;
@@ -62,7 +62,10 @@ namespace DapperDino.BuildingBlocks
 
         private void OnDestroy()
         {
-            playerHealth.OnDeath -= HandlePlayerDeath;
+            if(playerHealth != null)
+            {
+                playerHealth.OnDeath -= HandlePlayerDeath;
+            }
 
             foreach (var target in targets)
             {
@@ -92,7 +95,7 @@ namespace DapperDino.BuildingBlocks
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
             PlayerPrefs.SetInt($"Scene_{sceneIndex}", 1);
 #endif
-            cannon.SetActive(false);
+            playerHealth.gameObject.SetActive(false);
             wellDonePanel.SetActive(true);
 
             Cursor.visible = true;
@@ -104,7 +107,15 @@ namespace DapperDino.BuildingBlocks
 #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            if (SceneManager.sceneCountInBuildSettings == sceneIndex + 1)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneIndex + 1);
+            }          
 #endif
         }
 
@@ -125,6 +136,7 @@ namespace DapperDino.BuildingBlocks
                     break;
 
                 case PlayModeStateChange.EnteredEditMode:
+                    if (SceneManager.sceneCountInBuildSettings == sceneIndex + 1) { break; }
                     if (!PlayerPrefs.HasKey($"Scene_{sceneIndex}")) { break; }
                     if (PlayerPrefs.GetInt($"Scene_{sceneIndex}") != 1) { break; }
 
