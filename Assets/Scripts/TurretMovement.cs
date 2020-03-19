@@ -3,10 +3,10 @@ using static UnityEngine.InputSystem.InputAction;
 
 namespace DapperDino.BuildingBlocks
 {
-    public class CannonMovement : MonoBehaviour
+    public class TurretMovement : MonoBehaviour
     {
         [SerializeField] private float movementSpeed = 5f;
-        [SerializeField] private Vector2 limits = new Vector2(-2.5f, 2.5f);
+        [SerializeField] private Vector2 limits = new Vector2(-4f, 4f);
 
         private float previousInput;
 
